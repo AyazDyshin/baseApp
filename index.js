@@ -10,8 +10,8 @@
 // // import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index.js";
 // // import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index";
 // const tt = require ('@inrupt/solid-client-authn-browser');
-const tt = require ('@inrupt/solid-client-authn-browser');
-const hh = require ('@inrupt/solid-client');
+const tt = requirejs ('@inrupt/solid-client-authn-browser');
+const hh = requirejs ('@inrupt/solid-client');
 
 const SOLID_IDENTITY_PROVIDER = "https://solidcommunity.net";
 document.getElementById(
