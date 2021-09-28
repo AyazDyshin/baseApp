@@ -5,8 +5,8 @@ import {
 } from "./@inrupt/solid-client";
 import { Session } from "./node_modules/@inrupt/solid-client-authn-browser";
 // import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client";
-import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client/dist/index";
-// import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client/dist/index.js";
+// import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client/dist/index";
+import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client/dist/index.js";
 // import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index.js";
 // import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index";
 
