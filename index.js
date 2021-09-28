@@ -4,7 +4,7 @@ import {
   getFile,
 } from "./@inrupt/solid-client";
 import { Session } from "./node_modules/@inrupt/solid-client-authn-browser";
-import { deleteFile } from "./node_modules/@inrupt/solid-client";
+import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client";
 
 const SOLID_IDENTITY_PROVIDER = "https://solidcommunity.net";
 document.getElementById(
