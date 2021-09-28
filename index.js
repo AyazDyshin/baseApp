@@ -1,15 +1,17 @@
-import {
-  getSolidDataset,
-  overwriteFile,
-  getFile,
-} from "@inrupt/solid-client";
-// import { Session } from "@inrupt/solid-client-authn-browser";
-// import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client";
-// import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client/dist/index";
-import { deleteFile } from "@inrupt/solid-client";
-// import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index.js";
-// import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index";
+// import {
+//   getSolidDataset,
+//   overwriteFile,
+//   getFile,
+// } from "@inrupt/solid-client";
+// // import { Session } from "@inrupt/solid-client-authn-browser";
+// // import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client";
+// // import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client/dist/index";
+// import { deleteFile } from "@inrupt/solid-client";
+// // import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index.js";
+// // import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index";
+// const tt = require ('@inrupt/solid-client-authn-browser');
 const tt = require ('@inrupt/solid-client-authn-browser');
+const hh = require ('@inrupt/solid-client');
 
 const SOLID_IDENTITY_PROVIDER = "https://solidcommunity.net";
 document.getElementById(
@@ -71,14 +73,14 @@ async function createNote() {
   //appending path where the notes will be stored
   const loc = currentUser + '/public/testfolder/';
   // fetch 
-  let myProfileDataset = await getSolidDataset(profileDocumentUrl.href, {
+  let myProfileDataset = await hh.getSolidDataset(profileDocumentUrl.href, {
     fetch: session.fetch
   });
   //creating full note path
   const fileName = noteTitle + '.txt';
   const finalPath = 'https://' + loc + fileName;
   // creating a note
-     const savedFile = await overwriteFile(
+     const savedFile = await hh.overwriteFile(
     finalPath,
     new Blob([name], { type: "plain/text" }),
     { contentType: "text/plain", fetch: session.fetch }
@@ -103,7 +105,7 @@ async function readProfile() {
   //creating full note path
   const finalUrl = 'https://'+ currentUser +'/public/testfolder/' + fileName + '.txt';
   //accessing the note
-  const fileBlob = await getFile(finalUrl, { fetch: session.fetch }).catch((error) => {
+  const fileBlob = await hh.getFile(finalUrl, { fetch: session.fetch }).catch((error) => {
     document.getElementById(
       "statusUpd"
     ).textContent = `the file you want to read does not exist`;
@@ -132,7 +134,7 @@ function delFile(){
   
   
   
-     deleteFile(
+     hh.deleteFile(
       toDelUpd,  
       { fetch: session.fetch } 
                               
