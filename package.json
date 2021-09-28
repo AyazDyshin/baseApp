@@ -14,10 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AyazDyshin/baseApp/issues"
-  },
-  "homepage": "https://github.com/AyazDyshin/baseApp#readme",
   "dependencies": {
     "@inrupt/solid-client": "^1.12.0",
     "@inrupt/solid-client-authn-browser": "^1.11.2",
