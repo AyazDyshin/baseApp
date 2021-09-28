@@ -3,12 +3,13 @@ import {
   overwriteFile,
   getFile,
 } from "@inrupt/solid-client";
-import { Session } from "@inrupt/solid-client-authn-browser";
+// import { Session } from "@inrupt/solid-client-authn-browser";
 // import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client";
 // import { deleteFile } from "./baseApp/node_modules/@inrupt/solid-client/dist/index";
 import { deleteFile } from "@inrupt/solid-client";
 // import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index.js";
 // import { deleteFile } from "./node_modules/@inrupt/solid-client/dist/index";
+const tt = require ('@inrupt/solid-client-authn-browser');
 
 const SOLID_IDENTITY_PROVIDER = "https://solidcommunity.net";
 document.getElementById(
@@ -17,7 +18,7 @@ document.getElementById(
 
 
 
-const session = new Session();
+const session = new tt.Session();
 
 const buttonLogin = document.getElementById("loginButton");
 const writeForm = document.getElementById("writeForm");
